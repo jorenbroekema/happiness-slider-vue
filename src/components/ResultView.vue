@@ -1,13 +1,21 @@
 <template>
   <div>
-    <p>This could be your result page.</p>
+    <p>{{ this.moodText }} {{ this.moodEmoji }}</p>
+    <p>Did you change your mood?</p>
+    <router-link to="/">Go back</router-link>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'ResultView'
-}
+  name: 'ResultView',
+  computed: {
+    moodText() {
+      return this.$store.state.moodText;
+    },
+    moodEmoji() {
+      return this.$store.state.moodEmoji;
+    },
+  },
+};
 </script>
-
-<style lang="scss"></style>

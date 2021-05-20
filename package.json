@@ -5,7 +5,8 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint && prettier \"**/*.{js,md,json,vue}\"",
+    "format": "prettier \"**/*.{js,md,json,vue}\" --write"
   },
   "dependencies": {
     "vue": "^2.6.11",
@@ -18,7 +19,10 @@
     "@vue/cli-service": "~4.5.0",
     "babel-eslint": "^10.1.0",
     "eslint": "^6.7.2",
+    "eslint-config-prettier": "^6.15.0",
+    "eslint-plugin-prettier-vue": "^3.0.0",
     "eslint-plugin-vue": "^6.2.2",
+    "prettier": "^1.19.1",
     "sass": "^1.32.12",
     "sass-loader": "^10.1.1",
     "vue-template-compiler": "^2.6.11"
@@ -30,12 +34,19 @@
     },
     "extends": [
       "plugin:vue/essential",
+      "plugin:prettier-vue/recommended",
+      "eslint-config-prettier",
       "eslint:recommended"
     ],
     "parserOptions": {
       "parser": "babel-eslint"
     },
     "rules": {}
+  },
+  "prettier": {
+    "arrowParens": "always",
+    "singleQuote": true,
+    "trailingComma": "all"
   },
   "browserslist": [
     "> 1%",

@@ -6,8 +6,8 @@
 
 <script>
 export default {
-  name: 'App'
-}
+  name: 'App',
+};
 </script>
 
 <style lang="scss">
@@ -16,5 +16,6 @@ export default {
 body {
   font-family: 'Montserrat';
   text-align: center;
+  font-size: 28px;
 }
 </style>
