@@ -11,6 +11,7 @@
         type="range"
         name="happiness"
         value="3"
+        :aria-valuetext="ariaValueText"
         min="1"
         max="5"
         step="1"
@@ -34,12 +35,23 @@ export default {
   data() {
     return {
       mood: 3,
+      ariaValueText: 'I am feeling neutral',
       error: false,
     };
   },
   methods: {
     setMood(ev) {
+      // Instead of reading 1 to 5, the screenreader
+      // will read out these values upon changing the value
+      const valueTexts = [
+        'I am feeling very unhappy',
+        'I am feeling somewhat unhappy',
+        'I am feeling neutral',
+        'I am feeling happy',
+        'I am feeling very happy',
+      ];
       this.mood = parseInt(ev.target.value, 10);
+      this.ariaValueText = valueTexts[this.mood - 1];
     },
     async submit(ev) {
       ev.preventDefault();
