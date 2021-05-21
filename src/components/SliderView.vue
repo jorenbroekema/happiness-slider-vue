@@ -106,7 +106,7 @@ h2 {
 }
 
 .submit-btn {
-  background-color: lightgreen;
+  background-color: lightsalmon;
   color: black;
   border: none;
   font-size: 1.5rem;
@@ -139,7 +139,7 @@ $thumb-d: 1.25em;
   width: $thumb-d;
   height: $thumb-d;
   border-radius: 50%;
-  background: lightgreen;
+  background: lightsalmon;
 }
 
 [type='range'] {

@@ -19,6 +19,7 @@ body {
   font-family: 'Montserrat';
   text-align: center;
   font-size: 28px;
+  background-color: #39b8ff;
 }
 
 .fade-enter-active,
