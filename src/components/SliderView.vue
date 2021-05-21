@@ -1,7 +1,8 @@
 <template>
   <div class="container">
     <h1>Happiness Slider</h1>
-    <p>How are you feeling?</p>
+    <h2>How are you feeling?</h2>
+    <p>{{ ariaValueText }}</p>
     <MoodEmoji ref="emoji" :mood="mood"></MoodEmoji>
     <form @submit="submit">
       <input
@@ -91,6 +92,11 @@ export default {
 
 h1 {
   font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 4rem;
 }
 
 @media (min-width: 350px) {
